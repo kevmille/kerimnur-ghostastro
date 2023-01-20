@@ -1,51 +1,54 @@
-# Welcome to [Astro](https://astro.build)
+<h2 align="center">
+Kerim Nur Blog
+</h2>
+<h3 align="center">
+Built with Astro + Ghost + Tailwind CSS
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+![screenshot](https://res.cloudinary.com/shinkirin/image/upload/v1671755084/sasebo-tech/SaseboTechFullLogo.webp)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Info:
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+- Website address: [https://kerimnur.com](https://kerimnur.com).
+- Headless Ghost address: [https://my.kerimnur.com](ttps://my.kerimnur.com) hosted on [Coolify](https://coolify.io/) at [Linode](https://linode.com).
+- [Vercel](https://vercel.com) address: [https://kerimnur.vercel.app/](https://kerimnur.vercel.app/).
+- Github Page: [https://github.com/Sasebo-Tech/](https://github.com/Sasebo-Tech/).
+- Repository at Github: [https://github.com/kevmille/kerimnur-ghostastro](https://github.com/kevmille/kerimnur-ghostastro).
+- Developed by [Kevin Matsunaga](https://kevinmatsunaga.com) for [Sasebo Tech](https://sasebo.tech).
+- Website and domain name management by [Kevin Matsunaga](https://kevinmatsunaga.com).
 
+## Site built with:
 
-## 🚀 Project Structure
+- [Astro](https://astro.build).
+- Designed with the [Tailwind CSS](https://tailwindcss.com) and [TailwindUI](https://tailwindui.com).
+- Draft AI generated content by [OpenAI](https://beta.openai.com).
+- Astro dropdown menu from [Astrolus](https://astrolus.netlify.app/) by [Tailus](https://github.com/Tailus-UI).
+- Photos and Images by: [Unsplash](https://unsplash.com) and [Undraw](https://undraw.io).
+- Icons from [Futicons](https://futicons.com/), [Icones](https://icones.js.org/), [Iconify](https://iconify.design/), and [Simple Icons](https://simpleicons.org).
+- Contact form by [Formspree](https://formspree.io/).
+- Photos and Images by: [Pexels.com](https://www.pexels.com), [Unsplash](https://unsplash.com) and [Undraw](https://undraw.io).
+- Web Analytics by [Plausible](https://plausible.io/).
 
-Inside of your Astro project, you'll see the following folders and files:
+### Licenses
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- [TailwindUI](https://tailwindui.com) Components licensed to [Kevin Matsunaga](https://kevinmatsunaga.com) for [Sasebo Tech](https://sasebo.tech).
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Kerim Nur colors
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+![screenshot](https://res.cloudinary.com/shinkirin/image/upload/v1673809774/mapleexpress/maple_express_colors.png)
 
-Any static assets, like images, can be placed in the `public/` directory.
+- The official Kerim Nur logo color is #FA5A03.
+- All colors are based on the maple leaf.
 
-## 🧞 Commands
+## Sasebo Tech
 
-All commands are run from the root of the project, from a terminal:
+- Organizational website: [https://sasebo.tech](https://sasebo.tech).
+- Github Repositories: [https://github.com/Sasebo-Tech](https://github.com/Sasebo-Tech).
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+<h4 align="center">
+	Website Design by:
+    <br>
+  <br>
+  <a target="_blank" href="https://sasebo.tech"><img src="https://res.cloudinary.com/shinkirin/image/upload/v1671755084/sasebo-tech/SaseboTechFullLogo.webp" alt="Sasebo Tech logo"></a>
+</h4>
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 # kerimnur-ghostastro
