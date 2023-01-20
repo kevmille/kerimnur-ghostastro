@@ -9,7 +9,7 @@ Built with Astro + Ghost + Tailwind CSS
 ## Info:
 
 - Website address: [https://kerimnur.com](https://kerimnur.com).
-- Headless Ghost address: [https://my.kerimnur.com](ttps://my.kerimnur.com) hosted on [Coolify](https://coolify.io/) at [Linode](https://linode.com).
+- Headless Ghost address: [https://my.kerimnur.com](https://my.kerimnur.com) hosted on [Coolify](https://coolify.io/) at [Linode](https://linode.com).
 - [Vercel](https://vercel.com) address: [https://kerimnur.vercel.app/](https://kerimnur.vercel.app/).
 - Github Page: [https://github.com/Sasebo-Tech/](https://github.com/Sasebo-Tech/).
 - Repository at Github: [https://github.com/kevmille/kerimnur-ghostastro](https://github.com/kevmille/kerimnur-ghostastro).
