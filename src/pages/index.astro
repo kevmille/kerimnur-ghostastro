@@ -1,6 +1,7 @@
 ---
 import { ghostClient } from "../lib/ghost";
 import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 const posts = await ghostClient.posts
   .browse({
     limit: "all",
@@ -26,5 +27,6 @@ const posts = await ghostClient.posts
         </a>
       ))
     }
+    <Footer />
   </body>
 </html>
