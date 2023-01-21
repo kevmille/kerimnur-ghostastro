@@ -47,6 +47,46 @@ const authors = await ghostClient.authors.browse({
       </div>
     </div>
     <!-- End of Header section -->
+    <!-- Start of Content Section -->
+    <div class="relative overflow-hidden bg-gray-50 py-16">
+      <div
+        class="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full lg:[overflow-anchor:none]"
+      >
+        <div
+          class="relative mx-auto h-full max-w-prose text-lg"
+          aria-hidden="true"
+        >
+        </div>
+      </div>
+      <div class="relative px-6 lg:px-8">
+        <div class="mx-auto max-w-prose text-lg">
+          <h1>
+            <span
+              class="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl"
+              >Generous Light</span
+            >
+          </h1>
+          <p class="mt-8 text-xl leading-8 text-gray-500">
+            Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At
+            arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae
+            feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget.
+            Eleifend egestas fringilla sapien.
+          </p>
+        </div>
+        <div class="prose prose-lg prose-indigo mx-auto mt-6 text-gray-500">
+          <p>
+            Faucibus commodo massa rhoncus, volutpat. <strong>Dignissim</strong>
+            sed <strong>eget risus enim</strong>. Mattis mauris semper sed amet
+            vitae sed turpis id. Id dolor praesent donec est. Odio penatibus
+            risus viverra tellus varius sit neque erat velit. Faucibus commodo
+            massa rhoncus, volutpat. Dignissim sed eget risus enim. <a href="#"
+              >Mattis mauris semper</a
+            > sed amet vitae sed turpis id.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End of Content Section -->
     <!-- Start of Posts section -->
     <div class="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
       <div class="absolute inset-0">
@@ -98,7 +138,7 @@ const authors = await ghostClient.authors.browse({
                   <div class="mt-6 flex items-center">
                     {authors.map((author) => (
                       <div class="flex-shrink-0">
-                        <a href="#">
+                        <a href={author.slug}>
                           <span class="sr-only">{author.name}</span>
                           <img
                             class="h-10 w-10 rounded-full"
@@ -111,7 +151,7 @@ const authors = await ghostClient.authors.browse({
                     <div class="ml-3">
                       {authors.map((author) => (
                         <p class="text-sm font-medium text-gray-900">
-                          <a href="#" class="hover:underline">
+                          <a href={author.slug} class="hover:underline">
                             {author.name}
                           </a>
                         </p>
