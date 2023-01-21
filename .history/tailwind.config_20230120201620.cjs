@@ -30,5 +30,11 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/aspect-ratio"),
+
+    plugin(function childrenPlugin({ addVariant }) {
+      // apply a style to all direct children
+      // example usage: "children:border-l children:border-blue-500"
+      addVariant("children", "& > *");
+    }),
   ],
 };

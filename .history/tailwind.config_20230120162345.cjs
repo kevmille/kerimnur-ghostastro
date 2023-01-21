@@ -8,6 +8,9 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      fontFamily: {
+        ubuntu: ["Ubuntu", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         gray: colors.stone,
         red: colors.rose,
@@ -30,5 +33,11 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/aspect-ratio"),
+
+    plugin(function childrenPlugin({ addVariant }) {
+      // apply a style to all direct children
+      // example usage: "children:border-l children:border-blue-500"
+      addVariant("children", "& > *");
+    }),
   ],
 };
