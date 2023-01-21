@@ -109,19 +109,17 @@ const authors = await ghostClient.authors.browse({
                       </div>
                     ))}
                     <div class="ml-3">
-                      {authors.map((author) => (
-                        <p class="text-sm font-medium text-gray-900">
-                          <a href="#" class="hover:underline">
-                            {author.name}
-                          </a>
-                        </p>
-                      ))}
+                      <p class="text-sm font-medium text-gray-900">
+                        <a href="#" class="hover:underline">
+                          {post.authors.name}
+                        </a>
+                      </p>
                       <div class="flex space-x-1 text-sm text-gray-500">
                         <time datetime="2020-03-10">
                           {new Date(post.published_at).toDateString()}
                         </time>
                         <span aria-hidden="true">&middot;</span>
-                        <span>{post.reading_time} min read.</span>
+                        <span>{post.reading_time} min.</span>
                       </div>
                     </div>
                   </div>

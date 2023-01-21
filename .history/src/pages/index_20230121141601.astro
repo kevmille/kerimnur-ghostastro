@@ -5,11 +5,8 @@ import { ghostClient } from "../lib/ghost";
 const posts = await ghostClient.posts.browse({
   limit: "6",
 });
-const tags = await ghostClient.tags.browse({
-  limit: "all",
-});
 const authors = await ghostClient.authors.browse({
-  limit: "all",
+  limit: "6",
 });
 ---
 
@@ -80,14 +77,15 @@ const authors = await ghostClient.authors.browse({
                 </div>
                 <div class="flex flex-1 flex-col justify-between bg-white p-6">
                   <div class="flex-1">
-                    {tags.map((tag) => (
-                      <p class="text-sm font-medium text-nur-500">
-                        <a href={`/tag/${tag.slug}`} class="hover:underline">
-                          {" "}
-                          {tag.name}
-                        </a>
-                      </p>
-                    ))}
+                    <p class="text-sm font-medium text-nur-500">
+                      <a
+                        href={`/tag/${post.tags.slug}`}
+                        class="hover:underline"
+                      >
+                        {" "}
+                        {post.tags.name}
+                      </a>
+                    </p>
                     <a href={`/post/${post.slug}`} class="mt-2 block">
                       <p class="text-xl font-semibold text-gray-900">
                         {post.title}
@@ -96,32 +94,34 @@ const authors = await ghostClient.authors.browse({
                     </a>
                   </div>
                   <div class="mt-6 flex items-center">
-                    {authors.map((author) => (
-                      <div class="flex-shrink-0">
-                        <a href="#">
-                          <span class="sr-only">{author.name}</span>
-                          <img
-                            class="h-10 w-10 rounded-full"
-                            src={author.profile_image}
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                    ))}
+                    <div class="flex-shrink-0">
+                      <div>
+                                            {
+                          authors.map((author) => (
+                      <a href="#">
+                        <span class="sr-only">{post.authors.name}</span>
+                        <img
+                          class="h-10 w-10 rounded-full"
+                          src={author.profile_image}
+                          alt=""
+                        />
+                      </a>
+                    </div>
                     <div class="ml-3">
-                      {authors.map((author) => (
-                        <p class="text-sm font-medium text-gray-900">
-                          <a href="#" class="hover:underline">
-                            {author.name}
-                          </a>
-                        </p>
-                      ))}
+                      <p class="text-sm font-medium text-gray-900">
+                        <a href="#" class="hover:underline">
+                          {author.name}
+                        </a>
+                      </p>
+                                ))
+          }
+                      </div>
                       <div class="flex space-x-1 text-sm text-gray-500">
                         <time datetime="2020-03-10">
                           {new Date(post.published_at).toDateString()}
                         </time>
                         <span aria-hidden="true">&middot;</span>
-                        <span>{post.reading_time} min read.</span>
+                        <span>{post.reading_time} min.</span>
                       </div>
                     </div>
                   </div>
