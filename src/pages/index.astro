@@ -13,10 +13,39 @@ const posts = await ghostClient.posts
 
 <html lang="en">
   <head>
-    <title>Astro + Ghost 👻</title>
+    <title>Kerim Nur</title>
   </head>
   <body>
     <Nav />
+    <!-- Start of Header section -->
+    <div class="relative bg-white">
+      <div class="absolute inset-0">
+        <img
+          class="h-full w-full object-cover"
+          src="https://res.cloudinary.com/shinkirin/image/upload/v1670299874/InnoIslam/bluemosque.webp"
+          alt="Blue Mosque - Istanbul, Turkey"
+        />
+        <div
+          class="absolute inset-0 bg-blue-300 mix-blend-multiply"
+          aria-hidden="true"
+        >
+        </div>
+      </div>
+      <div class="relative mx-auto max-w-7xl py-24 px-6 sm:py-32 lg:px-8">
+        <h1
+          class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+        >
+          Kerim Nur
+        </h1>
+        <p class="mt-6 max-w-3xl text-xl text-white">
+          Kerim means generous. Nur means light. My name is Kerim Nur. Assalaamu
+          Aleikum. This is a blog about my views of the world as a Muslim
+          convert.
+        </p>
+      </div>
+    </div>
+    <!-- End of Header section -->
+    <!-- Start of Posts section -->
     {
       posts.map((post) => (
         <a
@@ -27,6 +56,7 @@ const posts = await ghostClient.posts
         </a>
       ))
     }
+    <!-- End of Posts section -->
     <Footer />
   </body>
 </html>
