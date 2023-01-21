@@ -1,5 +1,6 @@
 ---
 import { ghostClient } from "../lib/ghost";
+import Nav from "../components/Nav.astro";
 const posts = await ghostClient.posts
   .browse({
     limit: "all",
@@ -14,10 +15,11 @@ const posts = await ghostClient.posts
     <title>Astro + Ghost 👻</title>
   </head>
   <body>
+    <Nav />
     {
       posts.map((post) => (
         <a
-          class=" text-red-400 hover:text-blue-400 text-md"
+          class=" text-nur-600 hover:text-blue-400 text-md"
           href={`/post/${post.slug}`}
         >
           <h1 class="mt-4 ml-4"> {post.title} </h1>

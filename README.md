@@ -32,13 +32,6 @@ Built with Astro + Ghost + Tailwind CSS
 
 - [TailwindUI](https://tailwindui.com) Components licensed to [Kevin Matsunaga](https://kevinmatsunaga.com) for [Sasebo Tech](https://sasebo.tech).
 
-### Kerim Nur colors
-
-![screenshot](https://res.cloudinary.com/shinkirin/image/upload/v1673809774/mapleexpress/maple_express_colors.png)
-
-- The official Kerim Nur logo color is #FA5A03.
-- All colors are based on the maple leaf.
-
 ## Sasebo Tech
 
 - Organizational website: [https://sasebo.tech](https://sasebo.tech).
