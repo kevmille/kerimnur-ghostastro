@@ -1,41 +1,29 @@
 ---
 import { ghostClient } from "../../lib/ghost";
-export const prerender = true;
-export async function getStaticPaths() {
-  const posts = await ghostClient.posts
-    .browse({
-      limit: "all",
-    })
-    .catch((err) => {
-      console.error(err);
-    });
 
-  return posts.map((post) => {
-    return {
-      params: {
-        slug: post.slug,
-      },
-      props: {
-        post: post,
-      },
-    };
-  });
-}
-
-const { post } = Astro.props;
+const posts = await ghostClient.posts.browse({
+  limit: "6",
+});
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>{post.title}</title>
-  </head>
-  <body>
-    <img src={post.feature_image} alt={post.title} />
+  {
+    posts.map((post) => (
+      <>
+        <head>
+          <title>{post.title}</title>
+        </head>
+        <body>
+          <img src={post.feature_image} alt={post.title} />
 
-    <h1>{post.title}</h1>
-    <p>{post.reading_time} min read</p>
+          <h1>{post.title}</h1>
+          <p>{post.reading_time} min read</p>
 
-    <Fragment set:html={post.html} />
-  </body>
+          <Fragment set:html={post.html} />
+        </body>
+      </>
+    ))
+  }
+
 </html>

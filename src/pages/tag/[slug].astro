@@ -2,42 +2,30 @@
 import { ghostClient } from "../../lib/ghost";
 import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
-export const prerender = true;
-export async function getStaticPaths() {
-  const tags = await ghostClient.tags
-    .browse({
-      limit: "all",
-    })
-    .catch((err) => {
-      console.error(err);
-    });
 
-  return tags.map((tag) => {
-    return {
-      params: {
-        slug: tag.slug,
-      },
-      props: {
-        tag: tag,
-      },
-    };
-  });
-}
-
-const { tag } = Astro.props;
+const tags = await ghostClient.tags.browse({
+  limit: "all",
+});
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>{tag.name}</title>
-  </head>
-  <body>
-    <Nav />
-    <img class="h-full w-full" src={tag.feature_image} alt={tag.name} />
+  {
+    tags.map((tag) => (
+      <>
+        <head>
+          <title>{tag.name}</title>
+        </head>
+        <body>
+          <Nav />
+          <img class="h-full w-full" src={tag.feature_image} alt={tag.name} />
 
-    <h1 class="text-black">{tag.name}</h1>
-    <p class="text-black">{tag.description}</p>
-    <Footer />
-  </body>
+          <h1 class="text-black">{tag.name}</h1>
+          <p class="text-black">{tag.description}</p>
+          <Footer />
+        </body>
+      </>
+    ))
+  }
+
 </html>
