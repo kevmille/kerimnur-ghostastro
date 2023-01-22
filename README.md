@@ -4,7 +4,7 @@ Kerim Nur Blog
 <h3 align="center">
 Built with Astro + Ghost + Tailwind CSS
 
-![screenshot](https://res.cloudinary.com/shinkirin/image/upload/v1671755084/sasebo-tech/SaseboTechFullLogo.webp)
+![screenshot](https://res.cloudinary.com/shinkirin/image/upload/v1674260495/kerimnurblog/KerimNurLogo.webp)
 
 ## Info:
 
