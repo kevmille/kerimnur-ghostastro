@@ -1,0 +1,27 @@
+---
+import { ghostClient } from "../../lib/ghost";
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+
+const tags = await ghostClient.tags.browse({
+  limit: "all",
+});
+---
+
+<Layout title="Tags - Kerim Nur.">
+  <Nav />
+  <main>
+    {
+      tags.map((tag) => (
+        <>
+          <img class="h-full w-full" src={tag.feature_image} alt={tag.name} />
+
+          <h1 class="text-black">{tag.name}</h1>
+          <p class="text-black">{tag.description}</p>
+        </>
+      ))
+    }
+  </main>
+  <Footer />
+</Layout>
