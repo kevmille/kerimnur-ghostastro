@@ -5,9 +5,10 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
+  // ...
   site: "https://kerimnur.com",
   integrations: [sitemap()],
+  integrations: [tailwind()],
   output: "server",
   adapter: vercel(),
 });
