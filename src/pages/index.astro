@@ -1,4 +1,5 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { ghostClient } from "../lib/ghost";
@@ -13,12 +14,9 @@ const authors = await ghostClient.authors.browse({
 });
 ---
 
-<html lang="en">
-  <head>
-    <title>Kerim Nur</title>
-  </head>
-  <body>
-    <Nav />
+<Layout title="Welcome to Kerim Nur.">
+  <Nav />
+  <main>
     <!-- Start of Header section -->
     <div class="relative bg-white">
       <div class="absolute inset-0">
@@ -173,6 +171,6 @@ const authors = await ghostClient.authors.browse({
       </div>
     </div>
     <!-- End of Posts section -->
-    <Footer />
-  </body>
-</html>
+  </main>
+  <Footer />
+</Layout>

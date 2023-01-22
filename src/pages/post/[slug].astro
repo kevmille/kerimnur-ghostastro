@@ -1,29 +1,28 @@
 ---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
 import { ghostClient } from "../../lib/ghost";
-
 const posts = await ghostClient.posts.browse({
   limit: "6",
 });
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  {
-    posts.map((post) => (
-      <>
-        <head>
-          <title>{post.title}</title>
-        </head>
-        <body>
+<Layout title="Posts - Kerim Nur">
+  <Nav />
+  <main>
+    {
+      posts.map((post) => (
+        <>
           <img src={post.feature_image} alt={post.title} />
 
           <h1>{post.title}</h1>
           <p>{post.reading_time} min read</p>
 
           <Fragment set:html={post.html} />
-        </body>
-      </>
-    ))
-  }
-
-</html>
+        </>
+      ))
+    }
+  </main>
+  <Footer />
+</Layout>
